@@ -201,6 +201,7 @@ class SeleniumHandler(object):
         button = self.driver.find_element_by_id('btn_query')
         button.click()
         time.sleep(2)
+        self.page_source = self.driver.page_source
 
 
     def refresh_captcha(self):
@@ -248,4 +249,5 @@ class SeleniumHandler(object):
 if __name__ == '__main__':
     s = SeleniumHandler()
     print s.run(u'招商银行')
+
 
